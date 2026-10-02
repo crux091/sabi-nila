@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Application - Family Background</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="GeneralInformation.html"><i class="fas fa-user"></i> General Information</a></li>
+            <li class="active"><a href="FamilyBG.html"><i class="fas fa-house"></i> Family Background</a></li>
+            <li><a href="EducBg.html"><i class="fas fa-graduation-cap"></i> Educational Background</a></li>
+            <li><a href="Sibling.html"><i class="fas fa-users"></i> Sibling Information</a></li>
+            <li><a href="Medical.html"><i class="fas fa-notes-medical"></i> Medical History</a></li>
+        </ul>
+    </div>
+
+    <div class="main-container">
+        <div class="title">
+            <h1>STUDENT APPLICATION FORM</h1>
+        </div>
+
+        <div class="instructions">
+            <p>Fill in every field marked with an asterisk (<b>*</b>).</p>
+            <p>Ensure that all information provided is accurate and up-to-date.</p>
+        </div>
+
+        <div id="statusMessage" class="status-banner">
+            System Ready. Enter a Student ID to Retrieve or Update.
+        </div>
+
+
+
+        <form id="appForm">
+            <div class="form-card">
+                <section class="Fambg">
+                    <h2>Family Background</h2>
+                    <p class="section-subtitle">Please provide your family details.</p>
+
+                <div class="grid">
+                    <!-- MOTHER'S SECTION -->
+                    <div class="section-header">Mother's Information</div>
+                    
+                    <div class="form-group">
+                        <label>Mother's Name</label>
+                        <input type="text" name="family.MotherName" maxlength="150">
+                    </div>
+                    <div class="form-group">
+                        <label>Mother's Birthdate</label>
+                        <input type="date" name="family.MotherBirthdate">
+                    </div>
+                    <div class="form-group">
+                        <label>Mother's Citizenship</label>
+                        <select name="family.MotherCitizenshipID" data-lookup="citizenship"></select>
+                    </div>
+                    <div class="form-group">
+                        <label>Mother's Occupation</label>
+                        <input type="text" name="family.MotherOccupation" maxlength="100">
+                    </div>
+                    <div class="form-group">
+                        <label>Mother's Education</label>
+                        <select name="family.MotherHighestEducationalAttainmentID" data-lookup="parentsEduc"></select>
+                    </div>
+                    <div class="form-group">
+                        <label>Mother's Contact Number</label>
+                        <input type="text" name="family.MotherContactNo" maxlength="20">
+                    </div>
+                    <div class="form-group">
+                        <label>Mother's Email</label>
+                        <input type="email" name="family.MotherEmailAddress" maxlength="100">
+                    </div>
+
+                    <!-- FATHER'S SECTION -->
+                    <div class="section-header">Father's Information</div>
+
+                    <div class="form-group">
+                        <label>Father's Name</label>
+                        <input type="text" name="family.FatherName" maxlength="150">
+                    </div>
+                    <div class="form-group">
+                        <label>Father's Birthdate</label>
+                        <input type="date" name="family.FatherBirthdate">
+                    </div>
+                    <div class="form-group">
+                        <label>Father's Citizenship</label>
+                        <select name="family.FatherCitizenshipID" data-lookup="citizenship"></select>
+                    </div>
+                    <div class="form-group">
+                        <label>Father's Occupation</label>
+                        <input type="text" name="family.FatherOccupation" maxlength="100">
+                    </div>
+                    <div class="form-group">
+                        <label>Father's Education</label>
+                        <select name="family.FatherHighestEducationalAttainmentID" data-lookup="parentsEduc"></select>
+                    </div>
+                    <div class="form-group">
+                        <label>Father's Contact Number</label>
+                        <input type="text" name="family.FatherContactNo" maxlength="20">
+                    </div>
+                    <div class="form-group">
+                        <label>Father's Email</label>
+                        <input type="email" name="family.FatherEmailAddress" maxlength="100">
+                    </div>
+
+                    <!-- HOUSEHOLD DETAILS -->
+                    <div class="section-header">Household & Guardian Details</div>
+
+                    <div class="form-group">
+                        <label>Parents' Marital Status</label>
+                        <select name="family.ParentsMaritalStatusID" data-lookup="parentsStatus"></select>
+                    </div>
+                    <div class="form-group">
+                        <label>Living Arrangement</label>
+                        <select name="family.LivingArrangementID" data-lookup="livingArrangement"></select>
+                    </div>
+                    <div class="form-group">
+                        <label>4Ps Member</label>
+                        <select name="family.FourPsMember" data-yesno></select>
+                    </div>
+                    <div class="form-group">
+                        <label>Legal Guardian <b>*</b></label>
+                        <input type="text" name="family.LegalGuardian" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Number of Siblings <b>*</b></label>
+                        <input type="number" min="0" name="family.NumberOfSiblings" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Birth Order</label>
+                        <input type="number" min="1" name="family.BirthOrder">
+                    </div>
+                    <div class="form-group">
+                        <label>Total Household Income (per month)</label>
+                        <select name="family.TotalHouseholdIncomeID" data-lookup="income"></select>
+                    </div>
+
+                    <div class="form-group wide">
+                        <label>Complete Permanent Address <b>*</b></label>
+                        <textarea name="family.CompletePermanentAddress" rows="2" required></textarea>
+                    </div>
+                </div>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-save">Next Step <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </section>
+            </div>
+        </form>
+    </div>
+    <script src="GeneralInformation.js"></script>
+</body>
+</html>

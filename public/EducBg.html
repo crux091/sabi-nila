@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head> 
+    <title>Student Application - Educational Background</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <ul>
+            <li>
+                <a href="GeneralInformation.html"> 
+                    <i class="fas fa-user"></i> General Information 
+                </a>
+            </li>
+            <li>
+                <a href="FamilyBG.html"> 
+                    <i class="fas fa-house"></i> Family Background 
+                </a>
+            </li>
+            <li class="active">
+                <a href="EducBg.html"> 
+                    <i class="fas fa-graduation-cap"></i> Educational Background 
+                </a>
+            </li>
+            <li>
+                <a href="Sibling.html"> 
+                    <i class="fas fa-users"></i> Sibling Information 
+                </a>
+            </li>
+            <li>
+                <a href="Medical.html"> 
+                    <i class="fas fa-notes-medical"></i> Medical History 
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main-container">
+
+        <div class="title">
+            <h1>STUDENT APPLICATION FORM</h1>
+        </div>
+
+        <div class="instructions">
+            <p> Fill in every field marked with an asterisk (<b>*</b>). </p>
+            <p> Ensure that all information provided is accurate and up-to-date. </p>
+        </div>
+
+        <div id="statusMessage" class="status-banner">
+            System Ready. Enter a Student ID to Retrieve or Update.
+        </div>
+
+
+
+        <form id="appForm">
+            <div class="form-card">
+                <section class="Educbg">
+                    <h2>Educational Background</h2>
+                    <p class="section-subtitle">Please provide your educational history.</p>
+
+                <div class="grid">
+
+                    <!-- Elementary Section -->
+                    <div class="section-header"> Elementary Section </div>
+                    <div class="form-group">
+                        <label> Elementary School <b>*</b> </label>
+                        <input name="education.ElementarySchoolName" maxlength="100" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label> Elementary Address </label>
+                        <input name="education.ElementarySchoolAddress">
+                    </div>
+
+                    <div class="form-group">
+                        <label> Elementary School Type </label>
+                        <select name="education.ElementarySchoolTypeID" data-lookup="schoolType"></select>
+                    </div>
+            
+                    <!-- Junior High Section -->
+                    <div class="section-header"> Junior High Section </div>
+                    <div class="form-group">
+                        <label> Junior High School <b>*</b> </label>
+                        <input name="education.JuniorHighSchoolName" maxlength="100" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label> Junior High Address </label>
+                        <input name="education.JuniorHighSchoolAddress">
+                    </div>
+            
+                    <div class="form-group">
+                        <label> Junior High School Type </label>
+                        <select name="education.JuniorHighSchoolTypeID" data-lookup="schoolType"></select>
+                    </div>
+            
+                    <!-- Senior High Section -->
+                    <div class="section-header"> Senior High Section </div>
+                    <div class="form-group">
+                        <label> Senior High School <b>*</b> </label>
+                        <input name="education.SeniorHighSchoolName" maxlength="100" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label> Senior High Address </label>
+                        <input name="education.SeniorHighSchoolAddress">
+                    </div>
+            
+                    <div class="form-group">
+                        <label> Senior High School Type </label>
+                        <select name="education.SeniorHighSchoolTypeID" data-lookup="schoolType"></select>
+                    </div>
+            
+                    <!-- Additional Details -->
+                    <div class="form-group">
+                        <label> Awards Received </label>    
+                        <textarea name="education.AwardsRecieved" rows="2"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label> Scholarships </label>
+                        <textarea name="education.Scholarships" rows="2"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label> Currently Employed </label>
+                        <select name="education.Employed" data-yesno></select>
+                    </div>
+
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-save">Next Step <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </section>
+            </div>
+        </form>
+    </div>
+    <script src="GeneralInformation.js"></script>
+</body>
+
+</html>

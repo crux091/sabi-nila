@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>Student Application - General Information</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <ul>
+            <li class="active"><a href="GeneralInformation.html"><i class="fas fa-user"></i> General Information</a></li>
+            <li><a href="FamilyBG.html"><i class="fas fa-house"></i> Family Background</a></li>
+            <li><a href="EducBg.html"><i class="fas fa-graduation-cap"></i> Educational Background</a></li>
+            <li><a href="Sibling.html"><i class="fas fa-users"></i> Sibling Information</a></li>
+            <li><a href="Medical.html"><i class="fas fa-notes-medical"></i> Medical History</a></li>
+        </ul>
+    </div>
+
+    <div class="main-container">
+        
+        <div class="title">
+            <h1>STUDENT APPLICATION FORM</h1>
+        </div>
+
+        <div class="instructions">
+            <p>Fill in every field marked with an asterisk (<b>*</b>).</p>
+            <p>Ensure that all information provided is accurate and up-to-date.</p>
+        </div>
+
+      <div id="statusMessage" class="status-banner">
+            System Ready. Enter a Student ID to Retrieve or Update.
+        </div>
+
+
+
+        <form id="appForm">
+            <div class="form-card">
+                <section class="GenInfo">
+                    <h2>General Information</h2>
+                    <p class="section-subtitle">Please provide your personal details.</p>
+
+                    <div class="grid">
+                        <label> Last name <b>*</b> 
+                            <input name="general.LastName" id="lastName" maxlength="50" required> </label>
+                        
+                        <label> First name <b>*</b> 
+                            <input name="general.FirstName" id="firstName" maxlength="50" required> </label>
+            
+                        <label> Middle name 
+                            <input name="general.MiddleName" id="middleName" maxlength="50"> </label>
+                        
+                        <label> Suffix 
+                            <select name="general.SuffixID" id="suffix">
+                                <option value="">-- None --</option>
+                                <option value="1">Jr.</option>
+                                <option value="2">Sr.</option>
+                                <option value="3">III</option>
+                            </select> </label>
+                        
+                        <label> Sex 
+                            <select name="general.SexID" id="sex">
+                                <option value="1">Male</option>
+                                <option value="2">Female</option>
+                            </select> </label>
+                        
+                        <label> Age <b>*</b> 
+                            <input type="number" min="10" max="99" name="general.Age" id="age" required> </label>
+                        
+                        <label> Civil status 
+                            <select name="general.CivilStatusID" id="civilStatus">
+                                <option value="1">Single</option>
+                                <option value="2">Married</option>
+                            </select> </label>
+                        
+                        <label> Religion 
+                            <input name="general.Religion" id="religion" maxlength="100"> </label>
+                        
+                        <label> Region <b>*</b> 
+                            <select name="general.RegionID" id="region" required>
+                                <option value="1">NCR</option>
+                                <option value="2">Region IV-A</option>
+                                <option value="3">Region III</option>
+                            </select> </label>
+                        
+                        <label> Language spoken 
+                            <input name="general.LanguageSpoken" id="language" maxlength="100"> </label>
+                        
+                        <label> Indigenous group 
+                            <input name="general.IndigenousGroup" id="indigenous" maxlength="100"> </label>
+                    
+                        <label> Contact number <b>*</b> 
+                            <input type="tel" name="general.ContactNo" id="contactNo" maxlength="20" required> </label>
+                        
+                        <label> Contact email <b>*</b> 
+                            <input type="email" name="general.Email" id="email" maxlength="100" required> </label>
+                        
+                        <label> Facebook link 
+                            <input name="general.FBLink" id="fbLink" maxlength="100"> </label>
+
+                        <label class="wide"> Current residence <b>*</b> 
+                            <textarea name="general.CurrentResidence" id="currentResidence" rows="2" required></textarea> </label>
+                
+                        <label class="wide"> Present address <b>*</b> 
+                            <textarea name="general.PresentAddress" id="presentAddress" rows="2" required></textarea> </label>
+                
+                        <label class="wide"> Permanent address <b>*</b> 
+                            <textarea name="general.PermanentAddress" id="permanentAddress" rows="2" required></textarea> </label>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-save">Next Step <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </section>
+            </div>
+        </form>
+
+    </div>
+    <script src="GeneralInformation.js"></script>
+</body>
+</html>
