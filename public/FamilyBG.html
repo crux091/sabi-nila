@@ -9,14 +9,49 @@
 <body>
 
     <div class="sidebar">
-        <ul>
-            <li><a href="GeneralInformation.html"><i class="fas fa-user"></i> General Information</a></li>
-            <li class="active"><a href="FamilyBG.html"><i class="fas fa-house"></i> Family Background</a></li>
-            <li><a href="EducBg.html"><i class="fas fa-graduation-cap"></i> Educational Background</a></li>
-            <li><a href="Sibling.html"><i class="fas fa-users"></i> Sibling Information</a></li>
-            <li><a href="Medical.html"><i class="fas fa-notes-medical"></i> Medical History</a></li>
-        </ul>
-    </div>
+            <ul>
+                <li data-page="Users.html">
+                    <a href="Users.html"> 
+                        <i class="fas fa-users-cog"></i> User Management 
+                    </a>
+                </li>
+                <li data-page="GeneralInformation.html">
+                    <a href="GeneralInformation.html"> 
+                        <i class="fas fa-user"></i> General Information 
+                    </a>
+                </li>
+                <li class="active" data-page="FamilyBG.html">
+                    <a href="FamilyBG.html"> 
+                        <i class="fas fa-house"></i> Family Background 
+                    </a>
+                </li>
+                <li data-page="EducBg.html">
+                    <a href="EducBg.html"> 
+                        <i class="fas fa-user-graduate"></i> Educational Background 
+                    </a>
+                </li>
+                <li data-page="Sibling.html">
+                    <a href="Sibling.html"> 
+                        <i class="fas fa-user-friends"></i> Sibling Information 
+                    </a>
+                </li>
+                <li data-page="MedicalBG.html">
+                    <a href="MedicalBG.html"> 
+                        <i class="fas fa-heartbeat"></i> Medical History 
+                    </a>
+                </li>
+                <li data-page="OtherInfos.html">
+                    <a href="OtherInfos.html">
+                        <i class="fas fa-info-circle"></i> Other Information
+                    </a>    
+                </li>
+                <li data-page="Enrollment.html">
+                    <a href="Enrollment.html">
+                        <i class="fas fa-user-check"></i> Student Enrollment Form
+                    </a>
+                </li>
+            </ul>
+        </div>
 
     <div class="main-container">
         <div class="title">
@@ -144,7 +179,8 @@
                 </div>
                 </div>
                 <div class="form-actions">
-                    <button type="submit" class="btn btn-save">Next Step <i class="fas fa-arrow-right"></i></button>
+                    <button type="submit" name="action" value="save" class="btn btn-update" style="margin-right: 10px;">Update <i class="fas fa-save"></i></button>
+                        <button type="submit" name="action" value="next" class="btn btn-save">Next Step <i class="fas fa-arrow-right"></i></button>
                 </div>
             </section>
             </div>

@@ -10,37 +10,42 @@
 <body>
  <div class="sidebar">
             <ul>
-                <li>
+                <li data-page="Users.html">
+                    <a href="Users.html"> 
+                        <i class="fas fa-users-cog"></i> User Management 
+                    </a>
+                </li>
+                <li data-page="GeneralInformation.html">
                     <a href="GeneralInformation.html"> 
                         <i class="fas fa-user"></i> General Information 
                     </a>
                 </li>
-                <li>
+                <li data-page="FamilyBG.html">
                     <a href="FamilyBG.html"> 
                         <i class="fas fa-house"></i> Family Background 
                     </a>
                 </li>
-                <li>
+                <li data-page="EducBg.html">
                     <a href="EducBg.html"> 
                         <i class="fas fa-user-graduate"></i> Educational Background 
                     </a>
                 </li>
-                <li>
+                <li data-page="Sibling.html">
                     <a href="Sibling.html"> 
                         <i class="fas fa-user-friends"></i> Sibling Information 
                     </a>
                 </li>
-                <li>
+                <li data-page="MedicalBG.html">
                     <a href="MedicalBG.html"> 
                         <i class="fas fa-heartbeat"></i> Medical History 
                     </a>
                 </li>
-                <li>
+                <li data-page="OtherInfos.html">
                     <a href="OtherInfos.html">
                         <i class="fas fa-info-circle"></i> Other Information
                     </a>    
                 </li>
-                <li class="active">
+                <li class="active" data-page="Enrollment.html">
                     <a href="Enrollment.html">
                         <i class="fas fa-user-check"></i> Student Enrollment Form
                     </a>
@@ -91,18 +96,18 @@ window.onload = setCurrentDateTime;
 
                     <label>
                         Student No <b>*</b>
-                        <input type="text" name="StudentNo" required>
+                        <input type="text" name="enrollment.StudentNo" required>
                     </label>
 
                     <label>
                         Date Registered <b>*</b>
-                        <input type="datetime-local" id="DateRegistered" name="DateRegistered"
+                        <input type="datetime-local" id="DateRegistered" name="enrollment.DateRegistered"
                         readonly >
                     </label>
 
                     <label>
                         User ID <b>*</b>
-                        <input type="text" name="UserID" required>
+                        <input type="text" name="enrollment.UserID" required>
                     </label>
 
                 </div>
@@ -113,7 +118,7 @@ window.onload = setCurrentDateTime;
 
                     <label>
                         Program <b>*</b>
-                        <select name="Program" required>
+                        <select name="enrollment.Program" required>
                             <option value="">Select Program</option>
                             <option>BS Information Systems</option>
                             <option>BS Information Technology</option>
@@ -128,7 +133,7 @@ window.onload = setCurrentDateTime;
 
                     <label>
                         Campus <b>*</b>
-                        <select name="Campus" required>
+                        <select name="enrollment.Campus" required>
                             <option value="">Select Campus</option>
                             <option>Villamor Air Base Campus</option>
                             <option>Basa Air Base  Campus</option>
@@ -144,16 +149,16 @@ window.onload = setCurrentDateTime;
 
                     <label>
                         Subject Code <b>*</b>
-                        <select name="SubjectCode" required>
+                        <select name="enrollment.SubjectCode" required>
                             <option value="">Select Subject Code</option>
-                            <option value="CC101">IT321</option>
-                            <option value="IS102">IS322</option>
+                            <option value="IT321">IT321</option>
+                            <option value="IS322">IS322</option>
                         </select>
                     </label>
 
                     <label>
                         Subject Name <b>*</b>
-                        <select name="SubjectName" required>
+                        <select name="enrollment.SubjectName" required>
                             <option value="">Select Subject Name</option>
                             <option>Information Management </option>
                             <option>Fundamentals of Information Systems</option>
@@ -162,7 +167,7 @@ window.onload = setCurrentDateTime;
 
                     <label>
                         Units <b>*</b>
-                        <input type="number" name="Units" min="1" max="7" required>
+                        <input type="number" name="enrollment.Units" min="1" max="7" required>
                     </label>
 
                 </div>
@@ -173,22 +178,17 @@ window.onload = setCurrentDateTime;
 
                     <label>
                         Enrollment ID <b>*</b>
-                        <input type="text" name="EnrollmentID" required>
-                    </label>
-
-                    <label>
-                        Student No <b>*</b>
-                        <input type="text" name="EnrollmentStudentNo" required>
+                        <input type="text" name="enrollment.EnrollmentID" required>
                     </label>
 
                     <label>
                         Academic Year <b>*</b>
-                        <input type="text" placeholder="2026-2027" required>
+                        <input type="text" name="enrollment.AcademicYear" placeholder="2026-2027" required>
                     </label>
 
                     <label>
                         Semester <b>*</b>
-                        <select required>
+                        <select name="enrollment.Semester" required>
                             <option value="">Select Semester</option>
                             <option>1st Semester</option>
                             <option>2nd Semester</option>
@@ -197,12 +197,12 @@ window.onload = setCurrentDateTime;
 
                     <label>
                         Year Section <b>*</b>
-                        <input type="text" required>
+                        <input type="text" name="enrollment.YearSection" required>
                     </label>
 
                     <label>
                         Enrollment Date <b>*</b>
-                        <input type="datetime-local" Id="EnrollmentDate" name="EnrollmentDate"
+                        <input type="datetime-local" Id="EnrollmentDate" name="enrollment.EnrollmentDate"
                         readonly >
                     </label>
 
@@ -218,5 +218,6 @@ window.onload = setCurrentDateTime;
 
     </div>
 
+    <script src="GeneralInformation.js"></script>
 </body>
 </html>
